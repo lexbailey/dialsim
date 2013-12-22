@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+
+  "name": "DialSim",
+  "description": "Simulates the sounds and speeds of your old 56k dial up connection.",
+  "version": "1.0",
+
+  "permissions": [
+    "tabs"
+  ],
+
+  "background": {
+    "page": "backgroundSounds.html"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["contentScript.js"],
+      "run_at": "document_start"
+    }
+  ]
+
+}
